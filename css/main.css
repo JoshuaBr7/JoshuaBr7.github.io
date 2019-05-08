@@ -1,0 +1,121 @@
+/* Div and general container adjustments */
+.parent {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.child {
+    display: inline-block !important;
+}
+
+.top-margin-sm {
+    margin-top: 25px;
+}
+
+.top-margin-md {
+    margin-top: 50px;
+}
+
+.bottom-margin-xsm {
+    margin-bottom: 10px;
+}
+
+.margin-center {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.margin-center-stretch {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.margin-center-top {
+    margin-top: 5px;
+    margin-bottom: 55px;
+}
+
+.max-width-height {
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: green;
+    align-items: center !important;
+}
+
+
+/* backgrounds and borders */
+
+.bg-lightblue {
+    background-color: lightblue;
+}
+
+.bg-lightgreen {
+    background-color: lightgreen;
+}
+
+.bg-darkblue {
+    background-color: darkblue;
+}
+
+.bg-white {
+    background-color: white;
+    color: black;
+}
+
+.bg-lightgray {
+    background-color: lightgray;
+}
+
+.bg-darkgray {
+    background-color: darkgray;
+}
+
+.border-inline {
+    display: inline-block !important;
+    border: 5px;
+    border-style: solid;
+}
+
+.border-no-top {
+    border-left: solid 1px;
+    border-right: solid 1px;
+    border-bottom: solid 1px;
+}
+
+.border-left-thin {
+    border-left: solid 2px !important;
+}
+.border-right-thin {
+    border-right: solid 2px !important;
+}
+
+.border-color-black {
+    border-color: black !important;
+}
+
+.border-color-black-thick {
+    border-color: black !important;
+    border-width: 5px !important;
+}
+
+.border-color-black-thin {
+    border-color: black !important;
+    border-width: 2px !important;
+}
+
+.border-color-orange {
+    border-color: orange !important;
+    border-width: 5px !important;
+}
+
+.override-padding {
+    padding: 0 !important;
+}
+
+.center-padding {
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
