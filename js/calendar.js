@@ -56,7 +56,7 @@ var endCalendar = new Date(currentCalendar.getFullYear(), currentCalendar.getMon
 var currNumber = startCalendar.getDate();
 var finalDay = endCalendar.getDate();
 var counter = currNumber;
-var panelArr = [];
+var panelArr = [[], []]; //2d array
 var x = -1;
 //The reason we check > 0 is because if it's > 0 then the Date() object above will return the previous month.
 var notCurrentMonth = (firstDay > 0);
@@ -129,16 +129,15 @@ for (i = 0; i < 35; i++) {
 
 var currentPanel = null;
 
-$(".outerpanel").click(function() {
+$(".outerpanel").mouseover(function() {
     console.log("clicked me!");
-    $(this).attr({
-        "style" : "background-color: rgb(0,150,200,0.4);"
-    });
+    $(this).addClass("scale-quarter");
     if (currentPanel != null) {
         if ( !(currentPanel.attr("id") == $(this).attr("id")) ) {
             currentPanel.attr({
                 "style" : "background-color: none;"
             })
+            currentPanel.removeClass("scale-quarter");
         }
     }
     currentPanel = $(this);

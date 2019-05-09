@@ -119,3 +119,13 @@
     margin-left: 20px;
     margin-right: 20px;
 }
+
+/* Scaling and other Transforms */
+
+.scale-quarter {
+    z-index: 100;
+    transition: 0.5s;
+    background-color: lightblue !important;
+    transform: scale3d(1.25, 1.25, 1.25);
+    border: solid 1px !important;
+}
