@@ -127,18 +127,28 @@ for (i = 0; i < 35; i++) {
     currNumber += 1;
 }
 
-var currentPanel = null;
+/**
+ *  Event Handling for Calendar
+ */
+$("#calendarEvent").modal({show: false});
 
-$(".outerpanel").mouseover(function() {
-    console.log("clicked me!");
-    $(this).addClass("scale-quarter");
-    if (currentPanel != null) {
-        if ( !(currentPanel.attr("id") == $(this).attr("id")) ) {
-            currentPanel.attr({
-                "style" : "background-color: none;"
-            })
-            currentPanel.removeClass("scale-quarter");
-        }
+//When mouse is over a tile we scale it up and change background color, otherwise we change it back to normal.
+$(".outerpanel").hover(
+    //mouse enters div
+    function() {
+        $(this).addClass("scale-quarter");
+    },
+    //mouse exits div
+    function() {
+        $(this).removeClass("scale-quarter");
     }
-    currentPanel = $(this);
-})
+);
+
+$(".outerpanel").click(function() {
+    console.log("You've clicked me.");
+    //Show modal display box
+    //Modify header of modal for the current date
+    $('#calmodalHeader').text("Events for " + months[currentCalendar.getMonth()] + " " + $(this).text());
+    $('#calendarEvent').modal('show');
+});
+
